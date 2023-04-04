@@ -9,7 +9,7 @@ The user puts in a search term into a GUI and the tool will check the contents o
 The user should be able to search on a single word. But to make the search better, you should be able to search on multiple words – e.g. “Christmas day”.. although what rules you apply as to whether these are assumed to be together or separate words is up to you; Maybe you can use “*” and logic (e.g. this word AND this word OR this word) to make the search smarter.
 
 
-The above is just a basic spec. To make this more advanced for more marks, you will need to:
+   The above is just a basic spec. To make this more advanced, you will need to:
 ---Have more sophisticated searching - e.g. exact phrase matches, comma separate words, wild cards (such as walk* to find walked, walking, walk etc).
 ---Have a way for the user to pick the search space (i.e. the text files to be searched).
 ---Have a good ranking mechanism so the strongest match is returned first – and a ranking metric (e.g. a %) is calculated and the user can see this.
