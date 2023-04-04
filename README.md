@@ -1,5 +1,5 @@
 # Java-Assignment
-Hello all, Welcome to my first Java Assignment Search Engine. 
+Hello all, Welcome to my first Java Assignment Search Engine :)
 
 
 Program Description :
