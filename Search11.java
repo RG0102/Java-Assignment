@@ -1,8 +1,15 @@
+/*******
 //Student Name: Ritika Gupta (C21368541)
 //Date started:
-//Date: 02/04/2023
-//Program Description: To create a search button
-
+//Date started: 02/04/2023
+//Date finished: 07/04/2023
+//Program Description: To create a search button using Java programming languages. 
+//Have more sophisticated phrases such as e.g. exact phrase matches, comma separate, words, wild cards (such as walk*, to find walked, walking, walk etc),
+//Have a way for the user to pick the search space and text files(to be searched).
+//Have a good ranking mechanism so the strongest match is returned first - and a ranking metric (e.g. a%) is calculated and the user can see this.
+//Spelling correction where it can correct wrong spelling of search terms
+//What else you can come up with?
+*********/
 //Importing Files
 import javax.swing.*;
 import java.awt.*;
@@ -68,7 +75,7 @@ public class SearchFile11 extends JFrame implements ActionListener
                 String searchTerm = userText.getText().replaceAll("[^a-zA-Z0-9 ]", "");
                 System.out.println("searchTerm=" + searchTerm);
 
-                // Choose 3 file to search
+                // Choose 3 files to search
                 File file = new File("imdb_movie_data.txt");
                 File file2 = new File("ChristmasGames.txt");
                 File file3 = new File("ChristmasMovies.txt");
