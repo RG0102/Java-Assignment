@@ -77,7 +77,7 @@ public class SearchFile18 extends JFrame implements ActionListener
                     userText.setText(" ");
                 }// end if
             }// end void actionPerformed Clear button
-        });
+        }); // end clearButton,addActionListener
         frame.setVisible(true);
 
         // Add ActionListener to JButton
@@ -118,13 +118,14 @@ public class SearchFile18 extends JFrame implements ActionListener
                 // Display the TreeMap which is naturally sorted
                 for (Map.Entry<Integer, String> entry : sorted.entrySet())
                 {
-                    //System.out.println("Count = " + entry.getKey() + ", FileName = " + entry.getValue());
                     matchResult = matchResult + entry.getValue()+ ": Total \""+searchTerm+ "\" found = "+entry.getKey() + "times\n";
-                }// end inner for loop
+                }// end inner Mapfor loop 
 
                 JOptionPane.showMessageDialog(null,matchResult);
             }
-
+            
+            
+            //I have created a extracted method which has SearchTerm, matches, Map and matchCount
             private void extracted(String searchTerm, File file, List<String> matches, Map<Integer, String> matchCountsMap)
             {
                 try (BufferedReader br = new BufferedReader(new FileReader(file)))
@@ -142,11 +143,10 @@ public class SearchFile18 extends JFrame implements ActionListener
                             String token = stringTokenizer.nextToken();
                             if (token.contains(searchTerm.toLowerCase()))
                             {
-                                //System.out.println("In matching line:" + line + " we find the search text " + searchTerm);
                                 count++;
                                 matches.add(file.getName() + ", line " + lineNum + ": " + line.trim());
                                 break;
-                            }// end if
+                            }// end  inner if
 
                         }// end inner while loop
 
