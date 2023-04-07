@@ -29,7 +29,7 @@ import java.io.IOException;
 import java.util.*;
 import java.util.List;
 
-public class SearchFile19 extends JFrame implements ActionListener
+public class SearchFile extends JFrame implements ActionListener
 {
     private static int count = 0;
     private static String File;
@@ -216,5 +216,5 @@ public class SearchFile19 extends JFrame implements ActionListener
 
     }// end actionPerformed (ActionEvent e)
 
-}// end SearchFile19 which extends JFrame and implement ActionListener
+}// end SearchFile which extends JFrame and implement ActionListener
 
