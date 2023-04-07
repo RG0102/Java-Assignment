@@ -84,7 +84,9 @@ public class SearchFile extends JFrame implements ActionListener
                     JOptionPane.showMessageDialog(null, "You have decided to clear the word.");
                     userText.setText(" ");
                 }// end if
+                
             }// end void actionPerformed Clear button
+            
         });// end clearButton addActionListener
 
         frame.setVisible(true);
@@ -123,7 +125,7 @@ public class SearchFile extends JFrame implements ActionListener
                         extracted(searchTerm, fileName, matches, wordcountmap);
                     }// end inner for loop
 
-                    //If statement, check if the user input the wrong word
+                    //If statement, check if the user input the wrong word or not?
                     if (wordcountmap.isEmpty())
                     {
                         JOptionPane.showMessageDialog(null, "You have mispelled the word wrong. Please try again!!!");
@@ -140,23 +142,24 @@ public class SearchFile extends JFrame implements ActionListener
                         sorted.putAll(wordcountmap);
                         String matchResult = "";
 
-                        // Display the TreeMap which is naturally sorted
+                        // Display the TreeMap which is naturally sorted in the descending order.
                         for (Map.Entry<Integer, String> entry : sorted.entrySet())
                         {
                             matchResult = matchResult + entry.getValue() + ": Total \"" + searchTerm + "\" found = " + entry.getKey() + "times\n";
 
                         }// end inner for loop
 
-                        JOptionPane.showMessageDialog(null, matchResult);
+                        JOptionPane.showMessageDialog(null, matchResult); //It display the message to the screen
 
                     }// end else statement
 
             }// end actionButton performed
 
 
-            // I have created an extracted method which contains parameter searchTerm, File, matches, Map and wordcountsMap
+            // I have created an extracted method which contains parameter searchTerm, File, matches, Map and wordcountsMap.
             private void extracted(String searchTerm, File file, List<String> matches, Map<Integer, String> wordcountmap)
             {
+                //It reads the text files line by line until it reaches the end or null of the text files.
                 try (BufferedReader br = new BufferedReader(new FileReader(file)))
                 {
                     String line = null;
@@ -180,14 +183,16 @@ public class SearchFile extends JFrame implements ActionListener
                             if (token.contains(searchTerm.toLowerCase()))
                             {
                                 count++;
-                                matches.add(file.getName() + ", line " + lineNum + ": " + line.trim());
-                                break;
+                                matches.add(file.getName() + ", line " + lineNum + ": " + line.trim()); // it will remove the white space in the text files.
+                                
+                                break;// it will break of the loop
                             }// end if
 
                         }// end inner while loop
 
                     }// end outer while loop
 
+                    //This if statement check if match.size() is greater than 0, it will displays me the result on the output. 
                     if (matches.size() > 0)
                     {
                         // Display results
