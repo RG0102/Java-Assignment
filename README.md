@@ -4,12 +4,29 @@ Hello all, Welcome to my first Java Assignment Search Engine :)
 
 Program Description :
 
+I have created a search tool bar using Jswing Libraries, Java ActionEvent, Java BufferReader, Java FileReader, Java util.List;
+
+Classes in Java
+
+I have also created two classes
+
+1. Public class SearchFile - it has two private variables 
+
+  1. Private static int count = 0;
+  2. Private static int String File;
+
+CLASS Description 
+
+1. Public static void main(String[] args)
+    1. JFrame - Setbackground
+    2. J
+
 This tool will allow you to search for a term across a set of text sources – e.g. groups of text files.
 The user puts in a search term into a GUI and the tool will check the contents of a set of text files and tell you which ones contain the search term. The files that have the “strongest match” against the search term should be returned at the top of the list.
 The user should be able to search on a single word. But to make the search better, you should be able to search on multiple words – e.g. “Christmas day”.. although what rules you apply as to whether these are assumed to be together or separate words is up to you; Maybe you can use “*” and logic (e.g. this word AND this word OR this word) to make the search smarter.
 
 
-   The above is just a basic spec. To make this more advanced, you will need to:
+ The above is just a basic spec. To make this more advanced, you will need to:
    
    
 1. Have more sophisticated searching - e.g. exact phrase matches, comma separate words, wild cards (such as walk* to find walked, walking, walk etc).
@@ -25,4 +42,6 @@ The user should be able to search on a single word. But to make the search bette
 I have created a cancel button which would cancel the word for me.
 
 If I got a more time, I would improve my GUI by making a box and makes it looks nicer by adding more colors, I would also add more advance features such as Progress Bar, and choose Files so that user can select the files from the GUI.
+
+
 
