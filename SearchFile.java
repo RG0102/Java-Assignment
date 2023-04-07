@@ -168,7 +168,7 @@ public class SearchFile extends JFrame implements ActionListener
                         lineNum++;
                         line = line.toLowerCase();
 
-                        //I have  creates a string Tokenizer which breaks the Strings into tokens with specified string and delimeter.
+                        //I have  create a string Tokenizer which breaks the Strings into tokens with specified string and delimeter.
                         // It will remove the commas in my text files.
                         StringTokenizer stringTokenizer = new StringTokenizer(line, ",");
 
