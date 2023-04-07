@@ -10,12 +10,14 @@ The user should be able to search on a single word. But to make the search bette
 
 
    The above is just a basic spec. To make this more advanced, you will need to:
----Have more sophisticated searching - e.g. exact phrase matches, comma separate words, wild cards (such as walk* to find walked, walking, walk etc).
----Have a way for the user to pick the search space (i.e. the text files to be searched).
----Have a good ranking mechanism so the strongest match is returned first – and a ranking metric (e.g. a %) is calculated and the user can see this.
----Spelling correction where it can correct wrong spelling of search terms
-----What else can you come up with?
+   
+   
+Have more sophisticated searching - e.g. exact phrase matches, comma separate words, wild cards (such as walk* to find walked, walking, walk etc).
+Have a way for the user to pick the search space (i.e. the text files to be searched).
+Have a good ranking mechanism so the strongest match is returned first – and a ranking metric (e.g. a %) is calculated and the user can see this.
+Spelling correction where it can correct wrong spelling of search terms
+What else can you come up with?
 
 
-If I got a time, I would improve my GUI and makes it looks nicer, I would also add more advance features such as Progress Bar, Spell checker. 
+If I got a more time, I would improve my GUI by making a box and makes it looks nicer, I would also add more advance features such as Progress Bar, and choose Files so that user can select the files from the GUI.
 
