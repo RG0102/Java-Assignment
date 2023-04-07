@@ -1,45 +1,17 @@
 # Java-Assignment
 Hello all, Welcome to my first Java Assignment Search Engine :)
 
+This is a Java program that allows a user to search for specific term with a set of text files. The program has a Graphic User Interface (GUI), that prompts the user to input the search term, which is then used to search for matches in pre-determined, list of text files. The program will then return the files that have the strongest match against the search term at the top of the list.
 
-Program Description :
+The program import several Java libraries, including javax.swing, java.awt, java.awt.event, java.io, java.util. It defines a class called SearchFile, which extends the JFrame and implements the ActionListener interface. The class contains several instance, variables including count and File.
 
-I have created a search tool bar using Jswing Libraries, Java ActionEvent, Java BufferReader, Java FileReader, Java util.List;
+The program creates a new JFrame with a size of 600x600 and sets the layout to FlowLayout. It also creates a JPanel with a BorderLayout, which is added to the JFrame. The JPanel has the red background and contains the JLabel that prompt the user to enter a search term, a JTextField where the user can input the search terms and two JButton, one for searching, and one for clearing the input field.
 
-Classes in Java
+When the user clicks on the clear button, the program clears the text field. When the users clicks on the search button, the program retrieves the search term from the JTextField and searches for it within the predetermined list of text files. The search term is cleaned by removing all special characters and then split it into individual words.
 
-I have also created two classes
+The program then loop through each files in the list and searches for match using the extract method. If the search term matches words in the file, the count is increased. The matches are stored in the List<String>, and the word count is stored in the Map<Integer, String> called wordcountmap. 
 
-1. Public class SearchFile - it has two private variables 
-
-  1. Private static int count = 0;
-  2. Private static int String File;
-
-CLASS Description 
-
-1. Public static void main(String[] args)
-    1. JFrame - Setbackground
-    2. J
-
-This tool will allow you to search for a term across a set of text sources – e.g. groups of text files.
-The user puts in a search term into a GUI and the tool will check the contents of a set of text files and tell you which ones contain the search term. The files that have the “strongest match” against the search term should be returned at the top of the list.
-The user should be able to search on a single word. But to make the search better, you should be able to search on multiple words – e.g. “Christmas day”.. although what rules you apply as to whether these are assumed to be together or separate words is up to you; Maybe you can use “*” and logic (e.g. this word AND this word OR this word) to make the search smarter.
-
-
- The above is just a basic spec. To make this more advanced, you will need to:
-   
-   
-1. Have more sophisticated searching - e.g. exact phrase matches, comma separate words, wild cards (such as walk* to find walked, walking, walk etc).
-
-2. Have a way for the user to pick the search space (i.e. the text files to be searched).
-
-3. Have a good ranking mechanism so the strongest match is returned first – and a ranking metric (e.g. a %) is calculated and the user can see this.
-
-4. Spelling correction where it can correct wrong spelling of search terms
-
-5. What else can you come up with?
-
-I have created a cancel button which would cancel the word for me.
+If the wordcountmap is empty the program informs the user that the word is misspelled. Otherwise, the program sorts the wordcountmap in descending order and displays the matches to the user using JOptionPane.  
 
 If I got a more time, I would improve my GUI by making a box and makes it looks nicer by adding more colors, I would also add more advance features such as Progress Bar, and choose Files so that user can select the files from the GUI.
 
